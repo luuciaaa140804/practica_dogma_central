@@ -1,0 +1,226 @@
+ SIMULADOR DEL DOGMA CENTRAL DE LA BIOLOGÍA MOLECULAR                                              
+ ADN → ADN (replicación) · ADN → ARN (transcripción) · ARN → proteína (traducción)
+
+  gen de ejemplo · 60 pares de bases · bacteria (E. coli)
+
+posición           1         11        21        31        41        51        
+hebra superior  5' AGGAGGTAAACCATGAAAGCAATTTTCGTACTGAAAGGTTGGTGGCGCACTTCCTGAAGC 3'
+                   ╎┆┆╎┆┆╎╎╎╎┆┆╎╎┆╎╎╎┆┆╎╎╎╎╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆
+hebra inferior  3' TCCTCCATTTGGTACTTTCGTTAAAAGCATGACTTTCCAACCACCGCGTGAAGGACTTCG 5'
+
+ • Las dos hebras son antiparalelas y complementarias: A=T (2 puentes de hidrógeno) y G≡C (3), 148
+   puentes en total.
+ • Los fragmentos de Okazaki y los cebadores se dibujan más cortos que en la célula para que
+   quepan en pantalla.
+
+ 1 · REPLICACIÓN (ADN → ADN) · Paso 1 de 7 · Iniciación: se abre la horquilla                      
+
+posición           1         11        21        31        41        51        
+molde superior  5' AGGAGGTAAACCATGAAAGCAATTTTCGTACTGAAAGGTTGGTGGCGCACTTCCTGAAGC 3'
+                   ~~~~~~~~~~~~╎╎┆╎╎╎┆┆╎╎╎╎╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆
+rezagada  ←     3'             ╎╎┆╎╎╎┆┆╎╎╎╎╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆ 5'
+                               H╎┆T╎╎┆┆╎╎╎╎╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆
+líder     →     5' aggAGGTAAACC╎╎┆╎╎╎┆┆╎╎╎╎╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆ 3'
+                   ╎┆┆╎┆┆╎╎╎╎┆┆╎╎┆╎╎╎┆┆╎╎╎╎╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆
+molde inferior  3' TCCTCCATTTGGTACTTTCGTTAAAAGCATGACTTTCCAACCACCGCGTGAAGGACTTCG 5'
+
+ • La proteína DnaA reconoce el origen de replicación (oriC). La ADN girasa alivia la tensión por
+   delante de la horquilla y las proteínas SSB (~) evitan que las hebras separadas se vuelvan a
+   unir.
+ • Helicasa: separa las posiciones 1-12 (30 puentes de hidrógeno rotos).
+ • Líder: la primasa pone un cebador de ARN (5'-AGG-3') y la ADN polimerasa III lo alarga de forma
+   continua (→) hasta la horquilla.
+ • Rezagada: el molde recién abierto espera, cubierto por SSB, al siguiente fragmento de Okazaki.
+
+  ATGC molde   ATGC líder   ATGC Okazaki   augc cebador (ARN)   ATGC relleno de la pol I
+  H helicasa   T girasa   ~ SSB   v ^ mella   ╎ ┆ 2 / 3 puentes de hidrógeno
+
+ 1 · REPLICACIÓN (ADN → ADN) · Paso 2 de 7 · La horquilla avanza                                   
+
+posición           1         11        21        31        41        51        
+molde superior  5' AGGAGGTAAACCATGAAAGCAATTTTCGTACTGAAAGGTTGGTGGCGCACTTCCTGAAGC 3'
+                   ╎┆┆╎┆┆╎╎╎╎┆┆╎╎┆╎╎╎┆┆╎╎╎╎╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆
+rezagada  ←     3' TCCTCCATTTGGTACTTTCGTuaa╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆ 5'
+                   ├─────────◀Ok1─────────┤H╎┆T╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆
+líder     →     5' aggAGGTAAACCATGAAAGCAATT╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆ 3'
+                   ╎┆┆╎┆┆╎╎╎╎┆┆╎╎┆╎╎╎┆┆╎╎╎╎╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆
+molde inferior  3' TCCTCCATTTGGTACTTTCGTTAAAAGCATGACTTTCCAACCACCGCGTGAAGGACTTCG 5'
+
+ • Helicasa: separa las posiciones 13-24 (27 puentes de hidrógeno rotos).
+ • Líder: la ADN polimerasa III sigue de forma continua hasta la horquilla (+12 nt).
+ • Rezagada: la primasa pone un cebador junto a la horquilla y la ADN polimerasa III sintetiza
+   hacia atrás (←) el fragmento de Okazaki 1 (posiciones 1-24).
+
+ 1 · REPLICACIÓN (ADN → ADN) · Paso 3 de 7 · La horquilla avanza                                   
+
+posición           1         11        21        31        41        51        
+molde superior  5' AGGAGGTAAACCATGAAAGCAATTTTCGTACTGAAAGGTTGGTGGCGCACTTCCTGAAGC 3'
+                   ╎┆┆╎┆┆╎╎╎╎┆┆╎╎┆╎╎╎┆┆╎╎╎╎~~~~~~~~~~~~┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆
+rezagada  ←     3' TCCTCCATTTGGTACTTTCGTuaa            ┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆ 5'
+                   ├─────────◀Ok1─────────┤            H┆╎T┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆
+líder     →     5' aggAGGTAAACCATGAAAGCAATTTTCGTACTGAAA┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆ 3'
+                   ╎┆┆╎┆┆╎╎╎╎┆┆╎╎┆╎╎╎┆┆╎╎╎╎╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆
+molde inferior  3' TCCTCCATTTGGTACTTTCGTTAAAAGCATGACTTTCCAACCACCGCGTGAAGGACTTCG 5'
+
+ • Helicasa: separa las posiciones 25-36 (28 puentes de hidrógeno rotos).
+ • Líder: la ADN polimerasa III sigue de forma continua hasta la horquilla (+12 nt).
+ • Rezagada: el molde recién abierto espera, cubierto por SSB, al siguiente fragmento de Okazaki.
+
+ 1 · REPLICACIÓN (ADN → ADN) · Paso 4 de 7 · La horquilla avanza                                   
+
+posición           1         11        21        31        41        51        
+molde superior  5' AGGAGGTAAACCATGAAAGCAATTTTCGTACTGAAAGGTTGGTGGCGCACTTCCTGAAGC 3'
+                   ╎┆┆╎┆┆╎╎╎╎┆┆╎╎┆╎╎╎┆┆╎╎╎╎╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆
+rezagada  ←     3' TCCTCCATTTGGTACTTTCGTuaaAAGCATGACTTTCCAACCACCgcg╎┆╎╎┆┆╎┆╎╎┆┆ 5'
+                   ├─────────◀Ok1─────────┤├─────────◀Ok2─────────┤H┆╎T┆┆╎┆╎╎┆┆
+líder     →     5' aggAGGTAAACCATGAAAGCAATTTTCGTACTGAAAGGTTGGTGGCGC╎┆╎╎┆┆╎┆╎╎┆┆ 3'
+                   ╎┆┆╎┆┆╎╎╎╎┆┆╎╎┆╎╎╎┆┆╎╎╎╎╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆
+molde inferior  3' TCCTCCATTTGGTACTTTCGTTAAAAGCATGACTTTCCAACCACCGCGTGAAGGACTTCG 5'
+
+ • Helicasa: separa las posiciones 37-48 (33 puentes de hidrógeno rotos).
+ • Líder: la ADN polimerasa III sigue de forma continua hasta la horquilla (+12 nt).
+ • Rezagada: la primasa pone un cebador junto a la horquilla y la ADN polimerasa III sintetiza
+   hacia atrás (←) el fragmento de Okazaki 2 (posiciones 25-48).
+
+ 1 · REPLICACIÓN (ADN → ADN) · Paso 5 de 7 · La horquilla avanza                                   
+
+posición           1         11        21        31        41        51        
+molde superior  5' AGGAGGTAAACCATGAAAGCAATTTTCGTACTGAAAGGTTGGTGGCGCACTTCCTGAAGC 3'
+                   ╎┆┆╎┆┆╎╎╎╎┆┆╎╎┆╎╎╎┆┆╎╎╎╎╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆
+rezagada  ←     3' TCCTCCATTTGGTACTTTCGTuaaAAGCATGACTTTCCAACCACCgcgTGAAGGACTucg 5'
+                   ├─────────◀Ok1─────────┤├─────────◀Ok2─────────┤├───◀Ok3───┤
+líder     →     5' aggAGGTAAACCATGAAAGCAATTTTCGTACTGAAAGGTTGGTGGCGCACTTCCTGAAGC 3'
+                   ╎┆┆╎┆┆╎╎╎╎┆┆╎╎┆╎╎╎┆┆╎╎╎╎╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆
+molde inferior  3' TCCTCCATTTGGTACTTTCGTTAAAAGCATGACTTTCCAACCACCGCGTGAAGGACTTCG 5'
+
+ • Helicasa: separa las posiciones 49-60 (30 puentes de hidrógeno rotos).
+ • Líder: la ADN polimerasa III sigue de forma continua hasta la horquilla (+12 nt).
+ • Rezagada: la primasa pone un cebador junto a la horquilla y la ADN polimerasa III sintetiza
+   hacia atrás (←) el fragmento de Okazaki 3 (posiciones 49-60).
+
+ 1 · REPLICACIÓN (ADN → ADN) · Paso 6 de 7 · La ADN polimerasa I sustituye los cebadores           
+
+posición           1         11        21        31        41        51        
+molde superior  5' AGGAGGTAAACCATGAAAGCAATTTTCGTACTGAAAGGTTGGTGGCGCACTTCCTGAAGC 3'
+                   ╎┆┆╎┆┆╎╎╎╎┆┆╎╎┆╎╎╎┆┆╎v╎╎╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆v┆┆╎┆╎╎┆┆╎┆╎v┆┆
+rezagada  ←     3' TCCTCCATTTGGTACTTTCGTTAAAAGCATGACTTTCCAACCACCGCGTGAAGGACTTCG 5'
+                   ├─────────◀Ok1─────────┤├─────────◀Ok2─────────┤├───◀Ok3───┤
+líder     →     5' AGGAGGTAAACCATGAAAGCAATTTTCGTACTGAAAGGTTGGTGGCGCACTTCCTGAAGC 3'
+                   ╎┆┆^┆┆╎╎╎╎┆┆╎╎┆╎╎╎┆┆╎╎╎╎╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆
+molde inferior  3' TCCTCCATTTGGTACTTTCGTTAAAAGCATGACTTTCCAACCACCGCGTGAAGGACTTCG 5'
+
+ • La ADN polimerasa I cambia cada cebador de ARN por ADN (actividad exonucleasa 5'→3'). Como el
+   cromosoma bacteriano es circular, el cebador de cada extremo se rellena desde el otro extremo.
+ • Quedan 4 mellas (v ^): falta el enlace fosfodiéster entre dos trozos de ADN vecinos.
+
+ 1 · REPLICACIÓN (ADN → ADN) · Paso 7 de 7 · La ADN ligasa sella las mellas: dos moléculas hijas   
+
+posición           1         11        21        31        41        51        
+hija 1: molde   5' AGGAGGTAAACCATGAAAGCAATTTTCGTACTGAAAGGTTGGTGGCGCACTTCCTGAAGC 3'
+                   ╎┆┆╎┆┆╎╎╎╎┆┆╎╎┆╎╎╎┆┆╎╎╎╎╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆
+        nueva   3' TCCTCCATTTGGTACTTTCGTTAAAAGCATGACTTTCCAACCACCGCGTGAAGGACTTCG 5'
+                                                                               
+hija 2: nueva   5' AGGAGGTAAACCATGAAAGCAATTTTCGTACTGAAAGGTTGGTGGCGCACTTCCTGAAGC 3'
+                   ╎┆┆╎┆┆╎╎╎╎┆┆╎╎┆╎╎╎┆┆╎╎╎╎╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆
+        molde   3' TCCTCCATTTGGTACTTTCGTTAAAAGCATGACTTTCCAACCACCGCGTGAAGGACTTCG 5'
+
+ • La ADN ligasa sella las 4 mellas: cada hebra nueva es ya una sola cadena continua.
+  ✔ Hebras nuevas complementarias a su molde (A-T, G-C), sin cebadores ni mellas.
+  ✔ Semiconservativa: cada hija conserva una hebra parental y ambas son idénticas a la original.
+  Fragmentos de Okazaki: 3 de 24 nt (en E. coli miden 1000-2000 nt). Cebadores: 4.
+
+ 2 · TRANSCRIPCIÓN (ADN → ARN) · Paso 1 de 2 · Iniciación y elongación                             
+
+posición           1         11        21        31        41        51        
+codificante     5' AGGAGGTAAACCATGAAAGCAATTTTCGTACTGAAAGGTTGGTGGCGCACTTCCTGAAGC 3'
+                   ╎┆┆╎┆┆╎╎╎╎┆┆╎╎┆╎╎╎┆┆╎╎           ╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆
+molde           3' TCCTCCATTTGGTACTTTCGTTAAAAGCATGACTTTCCAACCACCGCGTGAAGGACTTCG 5'
+                                           ╎╎┆┆╎╎                              
+ARNm            5' AGGAGGUAAACCAUGAAAGCAAUUUUCGUA▶                              3'
+                                         ╰─ARN pol─╯                           
+
+ • La ARN polimerasa (con el factor σ) se une al principio del gen y abre la doble hélice; a
+   diferencia de la ADN polimerasa, no necesita cebador.
+ • Lee la hebra molde (la inferior) en sentido 3'→5' y sintetiza el ARN 5'→3' por
+   complementariedad: A→U, T→A, G→C y C→G.
+
+ 2 · TRANSCRIPCIÓN (ADN → ARN) · Paso 2 de 2 · Terminación                                         
+
+posición           1         11        21        31        41        51        
+codificante     5' AGGAGGTAAACCATGAAAGCAATTTTCGTACTGAAAGGTTGGTGGCGCACTTCCTGAAGC 3'
+                   ╎┆┆╎┆┆╎╎╎╎┆┆╎╎┆╎╎╎┆┆╎╎╎╎╎╎┆┆╎╎┆╎┆╎╎╎┆┆╎╎┆┆╎┆┆┆┆┆╎┆╎╎┆┆╎┆╎╎┆┆
+molde           3' TCCTCCATTTGGTACTTTCGTTAAAAGCATGACTTTCCAACCACCGCGTGAAGGACTTCG 5'
+                                                                               
+ARNm            5' AGGAGGUAAACCAUGAAAGCAAUUUUCGUACUGAAAGGUUGGUGGCGCACUUCCUGAAGC 3'
+                                                                               
+
+ • La ARN polimerasa llega al final del gen y suelta el ARNm de 60 nucleótidos: es igual que la
+   hebra codificante, pero con U en lugar de T.
+
+ 3 · TRADUCCIÓN (ARN → PROTEÍNA) · Paso 1 de 3 · Iniciación                                        
+
+                       ┌───────────────┐  ribosoma 70S
+                       │ E     P     A │
+  ARNm  5'-…AGG   UAA   ACC   AUG   AAA   GCA   AUU   UUC…-3'
+                              ╎╎┆       
+                              UAC         anticodón del ARNt (3'→5')
+                               │        
+                              fMet        aminoácido
+
+  Cadena polipeptídica: fMet
+
+ • La subunidad pequeña (30S) se une al ARNm y se coloca sobre el primer AUG (posición 13). El
+   ARNt iniciador (anticodón 3'-UAC-5') trae la formilmetionina (fMet) al sitio P y se une la
+   subunidad grande (50S).
+
+  AUG inicio   UAA fin   ACC no se traduce   E P A sitios del ribosoma   RF factor de liberación
+
+ 3 · TRADUCCIÓN (ARN → PROTEÍNA) · Paso 2 de 3 · Elongación                                        
+
+                       ┌───────────────┐  ribosoma 70S
+                       │ E     P     A │
+  ARNm  5'-…UAA   ACC   AUG   AAA   GCA   AUU   UUC   GUA…-3'
+                              ╎╎╎   ┆┆╎ 
+                        UAC   UUU   CGU   anticodón del ARNt (3'→5')
+                         │     │     │  
+                        sale  Lys   Ala   aminoácido
+
+  Cadena polipeptídica: fMet─Lys─Ala
+
+ • Entra en el sitio A el ARNt cuyo anticodón (3'-CGU-5') es complementario del codón (5'-GCA-3').
+   Se forma el enlace peptídico y el ribosoma avanza un codón; el ARNt vacío sale por el sitio E.
+ • El ciclo se repite con cada codón: AAA→Lys, GCA→Ala, AUU→Ile, UUC→Phe, GUA→Val, CUG→Leu,
+   AAA→Lys, GGU→Gly, UGG→Trp, UGG→Trp, CGC→Arg, ACU→Thr, UCC→Ser.
+
+ 3 · TRADUCCIÓN (ARN → PROTEÍNA) · Paso 3 de 3 · Terminación                                       
+
+                       ┌───────────────┐  ribosoma 70S
+                       │ E     P     A │
+  ARNm  5'-…UGG   CGC   ACU   UCC   UGA   AGC-3'
+                              ╎┆┆       
+                        UGA   AGG   RF    anticodón del ARNt (3'→5')
+                         │     │        
+                        sale  Ser   fin   aminoácido
+
+  Cadena polipeptídica: fMet─Lys─Ala─Ile─Phe─Val─Leu─Lys─Gly─Trp─Trp─Arg─Thr─Ser
+
+ • Ningún ARNt reconoce el codón UGA: entra un factor de liberación, la proteína de 14 aminoácidos
+   se suelta y el ribosoma se separa.
+
+ RESUMEN · FLUJO DE LA INFORMACIÓN GENÉTICA: ADN → ADN → ARN → PROTEÍNA                            
+
+  ADN → ADN    ✔ replicación semiconservativa: dos moléculas idénticas a la original
+  ADN → ARN    ✔ transcripción: ARNm de 60 nucleótidos
+  ARN → prot.  ✔ traducción: proteína de 14 aminoácidos
+
+ Del gen a la proteína, codón a codón
+ADN codificante 5' ATG  AAA  GCA  ATT  TTC  GTA  CTG  AAA  GGT  TGG  TGG  CGC  ACT  TCC  TGA   3'
+ADN molde       3' TAC  TTT  CGT  TAA  AAG  CAT  GAC  TTT  CCA  ACC  ACC  GCG  TGA  AGG  ACT   5'
+ARNm            5' AUG  AAA  GCA  AUU  UUC  GUA  CUG  AAA  GGU  UGG  UGG  CGC  ACU  UCC  UGA   3'
+anticodón ARNt  3' UAC  UUU  CGU  UAA  AAG  CAU  GAC  UUU  CCA  ACC  ACC  GCG  UGA  AGG        5'
+aminoácido         fMet Lys  Ala  Ile  Phe  Val  Leu  Lys  Gly  Trp  Trp  Arg  Thr  Ser  Stop 
+                    M    K    A    I    F    V    L    K    G    W    W    R    T    S    *   
+
+  Proteína: fMet-Lys-Ala-Ile-Phe-Val-Leu-Lys-Gly-Trp-Trp-Arg-Thr-Ser
+            MKAIFVLKGWWRTS
+
